@@ -1,0 +1,16 @@
+<div class="chatPane">
+    <div  class="chatDisplay">
+        <div *ngFor="let chato of chatti" style="height: 60px">
+            <div class="que">{{chato.que}}</div>
+            <div class="ans">{{chato.ans}}</div>
+        </div>
+    </div>
+    <div class="chatTools">
+        <div class="textarea">
+            <input type="text" #textmsg (keyup)="0">
+        </div>
+        <div class="buttonarea">
+            <input type="button" value="Send" (click)="textAlert(textmsg.value)"/>
+        </div>
+    </div>
+</div>
