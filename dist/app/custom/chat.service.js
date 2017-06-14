@@ -18,7 +18,7 @@ var ChatService = (function () {
         this.jsonp = jsonp;
     }
     // getReply():Promise<any>{
-    //     //call the http request to fetch the data
+    //     //call the http request to fetch the data ok
     //     return this.http.get("https://jsonplaceholder.typicode.com/photos")
     //         .toPromise()
     //         .then(response=>response.json());
