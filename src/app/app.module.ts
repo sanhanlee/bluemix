@@ -6,7 +6,7 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import { AppComponent }  from './app.component';
 import { ChatComponent } from './custom/chat.component';
 
-const routes:Routes=[
+const routes: Routes= [
   {
     path: '',
     component: ChatComponent
