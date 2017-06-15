@@ -20,6 +20,7 @@ deploy:
     branch: master 
 # os:
 #   - linux
+# 
 # env:
 #   global:
 #     - DBUS_SESSION_BUS_ADDRESS=/dev/null
