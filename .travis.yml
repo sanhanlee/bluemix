@@ -10,6 +10,7 @@ preinstall:
   - npm i -g typescript
 
 script:
+  - npm run preinstall
   - npm run build
 deploy:
   provider: bluemixcloudfoundry
