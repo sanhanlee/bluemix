@@ -7,7 +7,7 @@ os:
   - linux
  
 script:
-  -npm run build
+  - npm run build
 # deploy:
 #   provider: bluemixcloudfoundry
 #   skip_cleanup: true
