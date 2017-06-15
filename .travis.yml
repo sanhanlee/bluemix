@@ -5,7 +5,10 @@ node_js:
   - "8.0.0"
 os:
   - linux
- 
+
+preinstall:
+  - npm i -g typescript
+
 script:
   - npm run build
 deploy:
