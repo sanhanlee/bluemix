@@ -1,15 +1,13 @@
-# dist: trusty
-# sudo: required
+dist: trusty
+sudo: required
 language: node_js
 node_js:
   - "8.0.0"
 os:
   - linux
-env:
-  global:
-    - DBUS_SESSION_BUS_ADDRESS=/dev/null
-    - DISPLAY=:99.0
-    - CHROME_BIN=chromium-browser
+ 
+script:
+  -npm run build
 # deploy:
 #   provider: bluemixcloudfoundry
 #   skip_cleanup: true
