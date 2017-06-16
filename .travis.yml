@@ -11,8 +11,9 @@ before_script:
   - npm i -g typescript
 
 script:
-  - npm run preinstall
   - npm run build
+  - npm run preinstall
+  
 deploy:
   provider: bluemixcloudfoundry
   skip_cleanup: true
