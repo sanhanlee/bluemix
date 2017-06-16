@@ -27,7 +27,7 @@ deploy:
 #   - linux
 # 
 # env:
-#   global:
+#   global: 
 #     - DBUS_SESSION_BUS_ADDRESS=/dev/null
 #     - DISPLAY=:99.0 
 #     - CHROME_BIN=chromium-browser
