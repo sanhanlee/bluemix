@@ -6,14 +6,23 @@ node_js:
 os:
   - linux
 
-before_script:
-  - npm install
-  - npm i -g typescript
+addons:
+  chrome: stable
+env:
+  global:
+    - DBUS_SESSION_BUS_ADDRESS=/dev/null
+before_install:
+  - export CHROME_BIN=chromium-browser
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+
+install:
+- npm install
 
 script:
   - npm run build
   - npm run preinstall
-  
+
 deploy:
   provider: bluemixcloudfoundry
   skip_cleanup: true
@@ -23,14 +32,14 @@ deploy:
   organization: $BLUEMIX_ORGANIZATION
   space: $BLUEMIX_SPACE
   on:
-    branch: master 
+    branch: master
 # os:
 #   - linux
-# 
+#
 # env:
-#   global: 
+#   global:
 #     - DBUS_SESSION_BUS_ADDRESS=/dev/null
-#     - DISPLAY=:99.0 
+#     - DISPLAY=:99.0
 #     - CHROME_BIN=chromium-browser
 # before_script:
 #   - sh -e /etc/init.d/xvfb start
@@ -40,4 +49,3 @@ deploy:
 #   - npm run lint
 #   - npm run test:once
 #   - npm run e2e
-  
